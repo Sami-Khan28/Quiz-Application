@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body id="admin-panel-section">
+    <header>
+        <div id="admin-panel-header">
+            <div>
+                <img src="../assets/images/techpaathshala-logo.svg" alt="techpaathshsla-logo">
+                <div id="menu-bar" onclick="hideAndShowMenuBar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="admin-header-list">
+                <ul>
+                    <li>Hello</li>
+                    <li id="show-user-name"></li>
+                </ul>
+                <img src="../assets/images/header-image.svg" alt="image" onclick="adminLogOut()">
+            </div>
+        </div>
+       <div id="admin-logout-container">
+        <div>
+            <i class="fa-solid fa-sort-up"></i>
+                <div id="logedinuser-firstname"></div>
+                <p id="current-user-name"></p>
+                <p id="current-user-email"></p>  
+                <button type="button" id="logOut-btn" onclick="logOut()">Log out</button>
+            </div>
+        </div>
+    </header>
+    <main id="admin-pages">
+        <section id="admin-page-menu" class="hide-menu">
+            <div>
+                <div>
+                    <a href="dashboard.html"> <i class="fa-solid fa-house"></i>Home</a>
+                </div>
+                <div>
+                    <a href="users.html"> <i class="fa-solid fa-user"></i> Users</a>
+                </div>
+                <div>
+                    <a href="quizes.html"> <i class="fa-solid fa-circle-question"></i>Quize</a>
+                </div>
+            </div>
+        </section>
+        <section id="home-page" >
+            <div>
+                <div>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <p>Total Student</p>
+                        <p id="student-counting"></p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <div>
+                        <p>Total Admin</p>
+                        <p id="admin-counting"></p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-book"></i>
+                    <div>
+                        <p>Total Course</p>
+                        <p id="countimg-counting"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/script.js"></script>
+    <script>
+         userName();
+         LoggedInUserFirstLetter()
+        //  countingStudent()
+    </script>
+</body>
+
+</html>

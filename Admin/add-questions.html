@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's start quiz app</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body id="admin-panel-section">
+    <header>
+        <div id="admin-panel-header">
+            <div>
+                <img src="../assets/images/techpaathshala-logo.svg" alt="techpaathshsla-logo">
+                <div id="menu-bar" onclick="addQuestionMarginLeft()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="admin-header-list">
+                <ul>
+                    <li>Hello</li>
+                    <li id="show-user-name"></li>
+                </ul>
+                <img src="../assets/images/header-image.svg" alt="image" onclick="adminLogOut()">
+            </div>
+        </div>
+        <div id="admin-logout-container">
+            <div>
+                <i class="fa-solid fa-sort-up"></i>
+                    <div id="logedinuser-firstname"></div>
+                    <p id="current-user-name"></p>
+                    <p id="current-user-email"></p>  
+                    <button type="button" id="logOut-btn" onclick="logOut()">Log out</button>
+                </div>
+            </div>
+    </header>
+    <main id="admin-pages">
+        <section id="admin-page-menu" class="hide-menu">
+            <div>
+                <div>
+                    <a href="dashboard.html"> <i class="fa-solid fa-house"></i>Home</a>
+                </div>
+                <div>
+                    <a href="users.html"> <i class="fa-solid fa-user"></i> Users</a>
+                </div>
+                <div>
+                    <a href="quizes.html"> <i class="fa-solid fa-circle-question"></i>Quize</a>
+                </div>
+            </div>
+        </section>
+        <section id="add-quize-section">
+            <p>Add New Quizes</p>
+            <form id="add-question-form">
+                <div>
+                    <div>
+                        <label for="question">Question<span class="star">*</span></label>
+                    </div>
+                    <textarea type="text" id="question" placeholder="Enter Question"></textarea>
+                </div>
+                <div class="option-wrapper">
+                    <div>
+                        <div>
+                            <label for="option-A">Option 1<span class="star">*</span> </label>
+                        </div>
+                        <input type="text" id="option1" placeholder="Enter Option 1" autocomplete="off" onchange="selectOption()">
+                    </div>
+                    <div>
+                        <div>
+                            <label for="option-B">Option 2<span class="star">*</span></label>
+                        </div>
+                        <input type="text" id="option2" placeholder="Enter Option 2" autocomplete="off" onchange="selectOption()">
+                    </div>
+                </div>
+                <div class="option-wrapper">
+                    <div>
+                        <div>
+                            <label for="option-C">Option 3<span class="star">*</span></label>
+                        </div>
+                        <input type="text" id="option3" placeholder="Enter Option 3" autocomplete="off" onchange="selectOption()">
+                    </div>
+                    <div>
+                        <div>
+                            <label for="Option-D">Option 4<span class="star">*</span></label>
+                        </div>
+                        <input type="text" id="option4" placeholder="Enter Option 4" autocomplete="off" onchange="selectOption()">
+                    </div>
+                </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="correct-answer">Correct Answer<span class="star">*</span></label>
+                    </div>
+                    <select id="option-list">
+                        <option value="" id="correct-answer">Select The Correct Answer</option>
+                        <option value="" id="select-option1">option1</option>
+                        <option value="" id="select-option2">option2</option>
+                        <option value="" id="select-option3">option3</option>
+                        <option value="" id="select-option4">option4</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="addNewQuizes()">Add Quize</button>
+            </form>
+        </section>
+    </main>
+    <script src="assets/script.js"></script>
+    <script>
+         userName();
+        selectOption()
+    </script>
+</body>
+
+</html>
